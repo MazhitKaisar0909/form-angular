@@ -1,0 +1,108 @@
+<div class="wrapper">
+    <img src="../../../assets/img/logoEDUCBA.jpg" alt="logo">
+
+    <form [formGroup]="myGroup" (submit)="onSubmit()">
+
+        <div class="">
+            <section class="fullName">
+
+                <h2>Full Name <span class="redDot">*</span></h2>
+
+                <div class="container">
+                    <div class="inputWrapper" [formGroup]="myGroup">
+                        <input type="text" formControlName="firstName" class="" />
+                        <p class="subTitle">First Name</p>
+                        <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                            <span class="error-message">Please enter your First Name</span>
+                        </div>
+                    </div>
+
+                    <div class="inputWrapper" [formGroup]="myGroup">
+                        <input type="text" formControlName="lastName" class="" />
+                        <p class="subTitle">Last Name</p>
+                        <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                            <span class="error-message">Please enter your Last Name</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="address">
+
+                <h2>Address<span class="redDot">*</span></h2>
+
+                <div class="inputWrapper">
+                    <input type="text" formControlName="street1" class="" />
+                    <p class="subTitle">Street Address</p>
+                    <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                        <span class="error-message">Please enter your Street Address</span>
+                    </div>
+                </div>
+
+                <div class="inputWrapper">
+                    <input type="text" class="" />
+                    <p class="subTitle">Street Address Line 2</p>
+                </div>
+
+                <div class="container">
+
+                    <div class="inputWrapper">
+                        <input type="text" formControlName="city" class="" />
+                        <p class="subTitle">City</p>
+                        <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                            <span class="error-message">Please enter your City</span>
+                        </div>
+                    </div>
+
+                    <div class="inputWrapper">
+                        <input type="text" formControlName="state" class="" />
+                        <p class="subTitle">State / Province</p>
+                        <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                            <span class="error-message">Please enter your State / Province</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="inputWrapper">
+                    <input type="text" formControlName="zipCode" class="" placeholder="" />
+                    <p class="subTitle">Postal / Zip Code</p>
+                    <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                        <span class="error-message">Please enter your Postal / Zip Code</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="contact">
+
+                <h2>Phone Number <span class="redDot">*</span></h2>
+                <div class="inputWrapper">
+                    <input type="number" class="shortInput" placeholder="(000) 000-0000" formControlName="phone" />
+                    <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                        <span class="error-message">Please enter your Phone Number</span>
+                    </div>
+                </div>
+
+                <h2>E-mail</h2>
+                <div class="inputWrapper">
+                    <input type="email" placeholder="ex: email@yahoo.com" formControlName="email" class="shortInput" />
+                    <p class="subTitle">example&#64;example.com</p>
+                    <div *ngIf="myGroup.controls.firstName.invalid && myGroup.controls.firstName.touched">
+                        <span class="error-message">Please enter your E-mail</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <hr />
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</div>
